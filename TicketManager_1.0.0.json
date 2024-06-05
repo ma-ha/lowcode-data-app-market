@@ -1,0 +1,119 @@
+{
+  "TicketManager/1.0.0": {
+    "require": [],
+    "entity": {
+      "Ticket": {
+        "title": "Ticket",
+        "scope": "inherit",
+        "maintainer": [
+          "appUser"
+        ],
+        "properties": {
+          "id": {
+            "type": "UUID",
+            "noDelete": true,
+            "noTable": true,
+            "noEdit": true
+          },
+          "Task": {
+            "type": "String",
+            "filter": true,
+            "stateTransition": {
+              "null_Create": true,
+              "Open_Reject": true,
+              "Open_Blocked": true,
+              "InProgress_StopProgress": true,
+              "InProgress_SetBlocked": true,
+              "Blocked_Unblock": true,
+              "Blocked_StartProgress": true,
+              "Review_Reopen": true,
+              "Closed_Reopen": true
+            }
+          },
+          "Assignee": {
+            "type": "String",
+            "filter": true,
+            "stateTransition": {
+              "null_Create": true,
+              "Open_StartProgress": true,
+              "Open_Reject": true,
+              "Open_Blocked": true,
+              "InProgress_Done": true,
+              "InProgress_StopProgress": true,
+              "InProgress_SetBlocked": true,
+              "Blocked_Unblock": true,
+              "Blocked_StartProgress": true,
+              "Review_Reopen": true,
+              "Review_Close": true,
+              "Closed_Reopen": true
+            }
+          },
+          "Description": {
+            "type": "Text",
+            "stateTransition": {
+              "null_Create": true,
+              "Open_StartProgress": true,
+              "Open_Reject": true,
+              "Open_Blocked": true,
+              "InProgress_Done": true,
+              "InProgress_StopProgress": true,
+              "InProgress_SetBlocked": true,
+              "Blocked_Unblock": true,
+              "Blocked_StartProgress": true,
+              "Closed_Reopen": true
+            },
+            "lines": 3,
+            "colWidth": "XL",
+            "noDelete": true
+          },
+          "Approval": {
+            "type": "String",
+            "noTable": true,
+            "stateTransition": {
+              "null_Create": false,
+              "Review_Close": true,
+              "Closed_Reopen": true
+            },
+            "noEdit": true
+          },
+          "Resolution": {
+            "type": "String",
+            "noEdit": true,
+            "stateTransition": {
+              "null_Create": false,
+              "InProgress_Resolve": true,
+              "InProgress_Done": true,
+              "Review_Reopen": true,
+              "InProgress_SetBlocked": true,
+              "InProgress_StopProgress": true,
+              "Blocked_Unblock": true,
+              "Blocked_StartProgress": true,
+              "Closed_Reopen": true
+            },
+            "colWidth": "XS",
+            "noDelete": true
+          }
+        },
+        "noDelete": true,
+        "csvUpload": true,
+        "stateModel": "Ticket",
+        "stateTransition": {}
+      }
+    },
+    "page": {},
+    "startPage": [
+      "Ticket"
+    ],
+    "title": "TicketManager",
+    "role": [
+      "appUser"
+    ],
+    "scope": {
+    },
+    "img": "img/k8s-fire.png",
+    "_cre": 1711692745036,
+    "_upd": 1714413925341,
+    "description": "This is a simple task manager.",
+    "by":"ma-ha"
+  }
+}

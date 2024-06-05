@@ -1,0 +1,193 @@
+{
+  "state": {
+    "null": {
+      "actions": {
+        "Create": {
+          "to": "Open"
+        }
+      },
+      "x": 100,
+      "y": 70
+    },
+    "Open": {
+      "actions": {
+        "StartProgress": {
+          "label": "Start",
+          "to": "InProgress"
+        },
+        "Reject": {
+          "to": "Closed",
+          "line": [
+            {
+              "x": 300,
+              "y": 10
+            },
+            {
+              "x": 900,
+              "y": 10
+            }
+          ],
+          "labelPos": {
+            "x": 600,
+            "y": 30
+          }
+        },
+        "Blocked": {
+          "to": "Blocked",
+          "line": [
+            {
+              "x": 320,
+              "y": 90
+            },
+            {
+              "x": 320,
+              "y": 150
+            },
+            {
+              "x": 380,
+              "y": 150
+            },
+            {
+              "x": 500,
+              "y": 150
+            }
+          ],
+          "labelPos": {
+            "x": 360,
+            "y": 150
+          },
+          "label": "Set Blocked"
+        }
+      },
+      "x": 300,
+      "y": 70,
+      "img": "state_3nnn.png"
+    },
+    "InProgress": {
+      "actions": {
+        "Done": {
+          "to": "Review"
+        },
+        "StopProgress": {
+          "label": "Stop",
+          "to": "Open",
+          "line": [
+            {
+              "x": 500,
+              "y": 30
+            },
+            {
+              "x": 320,
+              "y": 30
+            },
+            {
+              "x": 320,
+              "y": 70
+            }
+          ],
+          "labelPos": {
+            "x": 430,
+            "y": 30
+          }
+        },
+        "SetBlocked": {
+          "to": "Blocked",
+          "labelPos": {
+            "x": 420,
+            "y": 120
+          },
+          "label": "Set Blocked"
+        }
+      },
+      "x": 500,
+      "y": 70,
+      "img": "state_3gnn.png"
+    },
+    "Blocked": {
+      "actions": {
+        "StartProgress": {
+          "to": "InProgress",
+          "line": [
+            {
+              "x": 520,
+              "y": 150
+            },
+            {
+              "x": 520,
+              "y": 70
+            }
+          ],
+          "labelPos": {
+            "x": 530,
+            "y": 120
+          },
+          "label": "Continue"
+        },
+        "Unblock": {
+          "to": "Open",
+          "line": [
+            {
+              "x": 440,
+              "y": 170
+            },
+            {
+              "x": 300,
+              "y": 170
+            }
+          ],
+          "labelPos": {
+            "x": 300,
+            "y": 190
+          }
+        }
+      },
+      "x": 500,
+      "y": 170,
+      "img": "state_3rnn.png"
+    },
+    "Review": {
+      "actions": {
+        "Reopen": {
+          "to": "Open"
+        },
+        "Close": {
+          "to": "Closed",
+          "label": "Close"
+        }
+      },
+      "x": 700,
+      "y": 70,
+      "img": "state_3ggn.png"
+    },
+    "Closed": {
+      "actions": {
+        "Reopen": {
+          "to": "Open",
+          "line": [
+            {
+              "x": 900,
+              "y": 210
+            },
+            {
+              "x": 280,
+              "y": 210
+            },
+            {
+              "x": 280,
+              "y": 70
+            }
+          ],
+          "labelPos": {
+            "x": 650,
+            "y": 210
+          }
+        }
+      },
+      "x": 900,
+      "y": 70,
+      "img": "state_3ggg.png"
+    }
+  },
+  "name": "Ticket",
+  "by":"ma-ha"
+}

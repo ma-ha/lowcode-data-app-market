@@ -1,0 +1,55 @@
+{
+  "state": {
+    "null": {
+      "actions": {
+        "Create": {
+          "to": "Created",
+          "label": "Create"
+        }
+      }
+    },
+    "Created": {
+      "actions": {
+        "StartProgress": {
+          "to": "InProgress",
+          "label": "Start Progress"
+        }
+      },
+      "x": 300,
+      "y": 100,
+      "label": "Created"
+    },
+    "InProgress": {
+      "actions": {
+        "RequestPayment": {
+          "to": "PaymentPending",
+          "label": "Request Payment"
+        }
+      },
+      "x": 500,
+      "y": 100,
+      "label": "In Progress"
+    },
+    "PaymentPending": {
+      "actions": {
+        "PaymentReceived": {
+          "to": "Closed",
+          "label": "Payment Received",
+          "apiManaged": true
+        }
+      },
+      "x": 700,
+      "y": 100,
+      "label": "Payment Pending"
+    },
+    "Closed": {
+      "actions": {},
+      "x": 900,
+      "y": 100,
+      "label": "Closed"
+    }
+  },
+  "name": "Bill simple",
+  "id": "Bill-simple",
+  "by":"ma-ha"
+}

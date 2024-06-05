@@ -1,0 +1,76 @@
+[
+  {
+    "id":"Bill-simple",
+    "title":"Bill (simple)",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"Ticket",
+    "title":"Ticket",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"TicketManager_1.0.0",
+    "title":"Ticket Manager",
+    "author":"ma-ha",
+    "type": "App"
+  },
+  {
+    "id":"TmfResourceInventoryManagement_4.0.0",
+    "standard": "TM Forum",
+    "title":"Resource Inventory Management 4.0.0",
+    "author":"ma-ha",
+    "type": "App"
+  },
+  {
+    "id":"TmfServiceInventory_4.0.0",
+    "standard": "TM Forum",
+    "title":"Service Inventory",
+    "author":"ma-ha",
+    "type": "App"
+  },
+  {
+    "id":"TmfServiceOperatingStatus",
+    "standard": "TM Forum",
+    "title":"Service Operating Status",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"TmfServiceOrderingManagement_4.1.0",
+    "standard": "TM Forum",
+    "title":"Service Ordering Management",
+    "author":"ma-ha",
+    "type": "App"
+  },
+  {
+    "id":"TmfServiceOrderState",
+    "standard": "TM Forum",
+    "title":"Service Order State",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"TmfServiceState",
+    "standard": "TM Forum",
+    "title":"Service State",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"TmfUsageState",
+    "standard": "TM Forum",
+    "title":"Usage State",
+    "author":"ma-ha",
+    "type": "StateModel"
+  },
+  {
+    "id":"TmfUsageManagement_4.0.0",
+    "standard": "TM Forum",
+    "title":"Usage Management",
+    "author":"ma-ha",
+    "type": "App"
+  }
+]
